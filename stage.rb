@@ -23,4 +23,3 @@ Window.loop do
       exit                 # exit でプログラムを終了する
     end
 end
-
