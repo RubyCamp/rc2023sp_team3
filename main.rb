@@ -1,22 +1,22 @@
 require 'dxruby'
 
-require_relative 'image_manager'
-require_relative 'clicked_anim'
+require_relative 'teki'
+require_relative 'player'
 
-# 依存するファイル群を一括でrequireする
-Dir.glob("directors/*.rb") {|path| require_relative path }
-Dir.glob("map_chips/*.rb") {|path| require_relative path }
-
-require_relative 'map'
 
 Window.width = 800
 Window.height = 600
 Window.caption = "RubyCamp 2023SP Sample Game"
 
 # ゲーム開始時点で実行する最初のシーンディレクターを生成
-current_director = Directors::Title.new
+player = Player.new
+teki = Teki.new
+
+imgs = [@teki_image, @player_img]
 
 Window.loop do
-	current_director = current_director.play
+    teki.play
+    player.play
+    Sprite.draw(imgs)
 	break if Input.key_push?(K_ESCAPE) # ESCキー押下でメインループを抜ける
 end
