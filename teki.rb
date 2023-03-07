@@ -1,10 +1,11 @@
-class Teki
+class Teki < Sprite
   def initialize
     @teki_img = Image.load("teki.png")
-    @x = 0
+    @x = -1000
     @y = 100
     @x_size = 0.1
     @y_size = 0.1
+    super(@x,@y,@teki_img)
   end
 
   
@@ -13,6 +14,7 @@ class Teki
     @x += 2
     @x_size += 0.001
     @y_size += 0.001
+    self.x = @x
 
   end
 end

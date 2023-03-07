@@ -4,7 +4,7 @@ require 'dxruby'
 #flag = 0
 #jamp = 30
 
-class Player
+class Player < Sprite
     def initialize
         player_img = Image.load("images/haniwa.png")
         flag = 0
@@ -14,6 +14,9 @@ class Player
         @p_img = player_img
         @flag = flag
         @jamp = jamp
+        self.x = @x
+        self.y = @y
+        super(@x,@y,player_img)
     end
 
     def play
