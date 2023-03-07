@@ -1,11 +1,14 @@
 require 'dxruby'
 
-player_img = Image.load("../../images/haniwa.png")
-flag = 0
-jamp = 30
+#player_img = Image.load("images/haniwa.png")
+#flag = 0
+#jamp = 30
 
 class Player
-    def initialize(player_img, flag, jamp)
+    def initialize
+        player_img = Image.load("images/haniwa.png")
+        flag = 0
+        jamp = 30
         @x = 300
         @y = 300
         @p_img = player_img
@@ -13,8 +16,8 @@ class Player
         @jamp = jamp
     end
 
-    def move
-        Window.loop do
+    def play
+        #Window.loop do
             @x += Input.x*5 # 追加
 
             if Input.key_push?(K_SPACE)
@@ -45,10 +48,7 @@ class Player
                 @jamp += 1
             end
 
-             Window.draw(@x, @y, @p_img) # 書き換え
-        end
+            @player_img = Window.draw(@x, @y, @p_img) # 書き換え
+        #end
     end
 end
-
-r = Player.new(player_img,flag,jamp)
-r.move
