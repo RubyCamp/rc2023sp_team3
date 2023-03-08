@@ -1,6 +1,8 @@
 class Teki < Sprite
   def initialize
+    self.collision = [200,200,100]
     @teki_img = Image.load("teki.png")
+    @teki_img.set_color_key(C_WHITE)
     @x = -1000
     @y = 100
     @x_size = 0.1
