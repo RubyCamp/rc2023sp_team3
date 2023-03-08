@@ -3,7 +3,6 @@ require 'dxruby'
 require_relative 'teki'
 require_relative 'player'
 require_relative 'judge'
-require_relative 'stage2'
 
 # 依存するファイル群を一括でrequireする
 Dir.glob("directors/*.rb") {|path| require_relative path }

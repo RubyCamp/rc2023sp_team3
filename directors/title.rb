@@ -24,7 +24,6 @@ module Directors
         # Nきーが押されたらシーン遷移を実行する
 		def check_scene_transition
 			if Input.key_down?(K_N)
-				@stage2_director.timer_start
 				transition_scene(@stage2_director)
 			end
 		end
