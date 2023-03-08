@@ -6,6 +6,7 @@ require 'dxruby'
 
 class Player < Sprite
     def initialize
+        self.collision = [50,50,40]
         player_img = Image.load("images/haniwa.png")
         flag = 0
         jamp = 30
@@ -14,8 +15,8 @@ class Player < Sprite
         @p_img = player_img
         @flag = flag
         @jamp = jamp
-        self.x = @x
-        self.y = @y
+        #self.x = @x
+        #self.y = @y
         super(@x,@y,player_img)
     end
 
@@ -50,8 +51,10 @@ class Player < Sprite
                 end
                 @jamp += 1
             end
+        self.x = @x
+        self.y = @y
 
-            @player_img = Window.draw(@x, @y, @p_img) # 書き換え
+            @player_img = Window.draw_scale(@x, @y, @p_img, 0.2, 0.2) # 書き換え
         #end
     end
 end
