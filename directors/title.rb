@@ -3,8 +3,9 @@ module Directors
 	class Title < Base
 		def initialize
             super
-            @bg_img = ImageManager.load_image("images/title.png")
+            @bg_img = Image.load("images/title.png")
 			@stage2_director = Stage2.new
+            @font=Font.new(24)
 		end
 
         def render_frame
@@ -16,8 +17,8 @@ module Directors
 
         # シーンの背景を描画
 		def draw_background
-			Window.draw(0, 0, @bg_img)
-			draw_font(:center, 570, "Nキーで開始", :default, color: C_BLACK)
+			Window.draw(100, 150, @bg_img)
+			Window.draw_font(0, 0, "Nキーで開始", @font, color: C_WHITE)
 		end
 
         # Nきーが押されたらシーン遷移を実行する
