@@ -14,9 +14,9 @@ Window.caption = "島根への旅"
 
 
 # ゲーム開始時点で実行する最初のシーンディレクターを生成
-current_director = Directors::Title.new
+current_director = Teki.new
 
 Window.loop do
-	current_director = current_director.play
+	current_director.play
 	break if Input.key_push?(K_ESCAPE) # ESCキー押下でメインループを抜ける
 end
