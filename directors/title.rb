@@ -5,7 +5,7 @@ module Directors
             super
             @bg_img = Image.load("images/title.png")
 			@stage2_director = Stage2.new
-            @font=Font.new(24)
+            @font=Font.new(15)
 		end
 
         def render_frame
@@ -17,11 +17,12 @@ module Directors
 
         # シーンの背景を描画
 		def draw_background
-			Window.draw(100, 150, @bg_img)
-			Window.draw_font(0, 0, "Nキーで開始", @font, color: C_WHITE)
+			Window.draw(130, 150, @bg_img)
+            Window.draw_scale(130, 150,@bg_img , 1.8,1.8)
+			Window.draw_font(0, 0, "Let's Go !SIMANE !!Nキーを押してね！", @font, color: C_WHITE)
 		end
 
-        # Nきーが押されたらシーン遷移を実行する
+        # Nキーが押されたらシーン遷移を実行する
 		def check_scene_transition
 			if Input.key_down?(K_N)
 				transition_scene(@stage2_director)
