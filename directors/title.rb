@@ -3,7 +3,7 @@ module Directors
 	class Title < Base
 		def initialize
             super
-            @bg_img = Image.load("images/title.png")
+            @bg_img = Image.load("images/title2.png")
 			@stage2_director = Stage2.new
             @font=Font.new(15)
 		end
