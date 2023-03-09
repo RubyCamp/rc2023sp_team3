@@ -5,17 +5,26 @@ class Teki < Sprite
     @teki_img.set_color_key(C_WHITE)
     @x = -1000
     @y = 100
-    @x_size = 0.1
-    @y_size = 0.1
+    @x_size = 0.02
+    @y_size = 0.02
     super(@x,@y,@teki_img)
   end
 
   
   def play
     @teki_image = Window.draw_scale(@x, @y, @teki_img, @x_size, @y_size)
-    @x += 2
-    @x_size += 0.001
-    @y_size += 0.001
+    if @x < 100
+      flag = 0
+    elsif @x > 700
+      flag = 1
+    end
+    if flag == 0
+     @x += 1 
+    else
+      @x -= 2
+    end
+    @x_size += 0.0005
+    @y_size += 0.0005
     self.x = @x
 
   end
