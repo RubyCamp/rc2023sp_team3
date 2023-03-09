@@ -2,12 +2,15 @@ module Directors
     #ゲーム本体シーン
    class Stage2 < Base 
       require_relative '../maps/map'
+      require_relative '../charactor/player'
+
        def initialize
            super
          @bg_img1 = Image.load("images/tokyo.png")
          @bg_img2 = Image.load("images/izumo.png")
          @font = Font.new(32)
          @block = Map.new
+         @player = Player_move.new
        end
 
         def render_frame
