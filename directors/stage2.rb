@@ -2,6 +2,7 @@ module Directors
     #ゲーム本体シーン
    class Stage2 < Base 
       require_relative '../maps/map'
+
        def initialize
            super
          @bg_img1 = Image.load("images/tokyo.png")
