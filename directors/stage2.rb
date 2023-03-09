@@ -2,8 +2,6 @@ module Directors
     #ゲーム本体シーン
    class Stage2 < Base 
       require_relative '../maps/map'
-      require_relative '../charactor/player'
-
 
        def initialize
            super
@@ -13,9 +11,13 @@ module Directors
          @block = Map.new
          @teki = Teki.new
          @music1 = Music.new
+         @ending_director = Ending.new
        end
 
         def render_frame
+          if @block.clear?
+            transition_scene(@ending_director)		
+          end
             Window.draw_font(0, 400, "東京", @font, {:color => C_WHITE})
             Window.draw_font(650, 120, "出雲大社", @font, {:color => C_WHITE})
             Window.draw_scale(-260, 100, @bg_img1, 0.2, 0.2)
