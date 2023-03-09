@@ -6,13 +6,19 @@ module Directors
    
 =======
       require_relative '../maps/map'
+<<<<<<< HEAD
 >>>>>>> 2ae360e9913e1697c4c8317e71e26f4a685e33c6
+=======
+      require_relative '../charactor/player'
+
+>>>>>>> 253dc13675e91018bd011c27ccc0ba55f5880223
        def initialize
            super
          @bg_img1 = Image.load("images/tokyo.png")
          @bg_img2 = Image.load("images/izumo.png")
          @font = Font.new(32)
          @block = Map.new
+         @player = Player_move.new
        end
 
         def render_frame
