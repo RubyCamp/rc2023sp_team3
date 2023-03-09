@@ -129,4 +129,9 @@ class Map
     # p [@x/28,@y/17]
     #p [@x,@y]
     end
+    def clear?
+      @x > 750 &&  @x < 780 &&   @y > 100 &&  @y < 150
+    end
+
+
 end
