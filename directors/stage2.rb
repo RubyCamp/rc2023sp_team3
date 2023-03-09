@@ -12,6 +12,7 @@ module Directors
          @font = Font.new(22)
          @block = Map.new
          @teki = Teki.new
+         @music1 = Music.new
        end
 
         def render_frame
@@ -21,6 +22,7 @@ module Directors
             Window.draw_scale(365, -300, @bg_img2, 0.2, 0.2)
             @block.block
             @teki.play
+            @music1.play
         end
  end
 end
