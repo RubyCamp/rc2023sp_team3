@@ -1,8 +1,8 @@
 require 'dxruby'
+require_relative 'teki'
 
 # 依存するファイル群を一括でrequireする
 Dir.glob("directors/*.rb") {|path| require_relative path }
-Dir.glob("charactor/*.rb") {|path| require_relative path }
 
 
 # image_chara = Image.load("images/haniwa.png")
