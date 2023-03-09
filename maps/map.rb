@@ -46,7 +46,7 @@ class Map
     #配置パーツ
     @map_tile = []  
     @map_tile[0] = Image.new(32, 32, [0,0x00,0x99,0xff]) #背景１（空）
-    @map_tile[1] = Image.load("block.png") #障害物（ブロック）
+    @map_tile[1] = Image.load("images/block.png") #障害物（ブロック）
     @map_tile[2] = Image.new(32, 32, [0xff,0xff,0xff]) #背景２（雲）
     @map_tile[3] = Image.new(32, 32, [111,75,62]) #背景２（ニセブロック）  
     @map_tile[4] = Image.new(32, 32, [74,45, 30]) #背景２（ニセ） 123,85,68
