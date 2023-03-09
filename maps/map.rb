@@ -127,6 +127,6 @@ class Map
     #キャラの表示
     Window.draw(@x, @y, @char_tile) 
     # p [@x/28,@y/17]
-       p [@x,@y]
+    #p [@x,@y]
     end
 end
