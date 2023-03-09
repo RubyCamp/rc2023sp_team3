@@ -21,10 +21,11 @@ class Map
     #配置パーツ
     @map_tile = []
     @map_tile[0] = Image.new(32, 32, [0,0x00,0x99,0xff]) #背景１（空）
-    @map_tile[1] = Image.load("block.png") #障害物（ブロック）
+    @map_tile[1] = Image.load("images/block.png") #障害物（ブロック）
+    # @map_tile[1] = Image.new(32, 32, [0xff,0xfa,0x00]) #障害物（ブロック）
     @map_tile[2] = Image.new(32, 32, [0xff,0xff,0xff]) #背景２（雲）
 
-    # @char_tile = Image.new(32, 32, C_RED)
+    @char_tile = Image.new(32, 32, C_RED)
 
     #フレーム数設定
     Window.fps = 30
@@ -97,6 +98,6 @@ class Map
     Window.draw_tile(0,0,@map,@map_tile,0,0,nil,nil)
 
     #キャラの表示
-    # Window.draw(@x, @y, @char_tile) 
+    Window.draw(@x, @y, @char_tile) 
   end
 end
