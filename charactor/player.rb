@@ -34,7 +34,7 @@ module Charactor
         
             #天井衝突判定
             if (collision_tile(@x   , @y, @map) == 1 or 
-             collision_tile(@x+31, @y, @map) == 1) 
+              collision_tile(@x+31, @y, @map) == 1) 
               @y = @y/32*32 + 32
             end
         
