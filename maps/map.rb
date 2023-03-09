@@ -76,7 +76,7 @@ class Map
     end
 
     #左右移動
-    @x += Input.x * 2
+    # @x += Input.x * 2
 
     #壁衝突判定（左側）
     if collision_tile(@x, @y   , @map) == 1 or 
@@ -90,9 +90,9 @@ class Map
     end
 
     #ジャンプ
-    if Input.key_push?(K_SPACE) and @jump_ok
-      @f = -20
-    end
+    # if Input.key_push?(K_SPACE) and @jump_ok
+      # @f = -20
+    # end
 
     #マップの表示
     Window.draw_tile(0,0,@map,@map_tile,0,0,nil,nil)
