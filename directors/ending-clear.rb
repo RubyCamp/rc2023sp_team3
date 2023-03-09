@@ -8,9 +8,6 @@ module Directors
 		end
 
 		def render_frame
-			if Input.key_push?(K_SPACE)
-            		
-			end
 			Window.draw_scale(100, 100, @bg_img3, 2, 2)
 		end
 		
