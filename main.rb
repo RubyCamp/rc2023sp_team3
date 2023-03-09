@@ -1,5 +1,6 @@
 require 'dxruby'
 require_relative 'teki'
+require_relative 'music'
 
 # 依存するファイル群を一括でrequireする
 Dir.glob("directors/*.rb") {|path| require_relative path }
