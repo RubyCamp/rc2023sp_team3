@@ -51,7 +51,7 @@ class Map
     @map_tile[3] = Image.new(32, 32, [111,75,62]) #背景２（ニセブロック）  
     @map_tile[4] = Image.new(32, 32, [74,45, 30]) #背景２（ニセ） 123,85,68
 
-    @char_tile = Image.new(32, 32, C_RED)
+    # @char_tile = Image.new(32, 32, C_RED)
 
     #フレーム数設定
     Window.fps = 30
@@ -102,7 +102,7 @@ class Map
     end
 
     #左右移動
-    @x += Input.x * 2
+    # @x += Input.x * 2
 
     #壁衝突判定（左側）
     if collision_tile(@x, @y   , @map) == 1 or 
@@ -116,14 +116,14 @@ class Map
     end
 
     #ジャンプ
-    if Input.key_push?(K_SPACE) and @jump_ok
-      @f = -20
-    end
+    # if Input.key_push?(K_SPACE) and @jump_ok
+      # @f = -20
+    # end
 
     #マップの表示
     Window.draw_tile(0,0,@map,@map_tile,nil,nil,nil,nil)
 
     #キャラの表示
-    Window.draw(@x, @y, @char_tile) 
+    # Window.draw(@x, @y, @char_tile) 
   end
 end
