@@ -2,6 +2,8 @@ module Directors
     #ゲーム本体シーン
    class Stage2 < Base 
       require_relative '../maps/map'
+      require_relative '../charactor/player'
+
 
        def initialize
            super
